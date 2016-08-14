@@ -32,7 +32,7 @@ RUN cd /tmp && \
         -D BUILD_TESTS=NO \
 	-D BUILD_PERF_TESTS=NO \
 	.. && \
-    meke -j 4 VERBOSE=1 && \
+    make -j 4 VERBOSE=1 && \
     make && \
     make install 
 
