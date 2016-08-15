@@ -19,9 +19,9 @@ ENV CC /usr/bin/clang
 ENV CXX /usr/bin/clang++
 
 RUN cd /tmp && \ 
-    wget -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip && \
+    wget -q -O opencv.zip https://github.com/Itseez/opencv/archive/3.1.0.zip && \
     unzip -q opencv.zip && \
-    wget -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip && \
+    wget -q -O opencv_contrib.zip https://github.com/Itseez/opencv_contrib/archive/3.1.0.zip && \
     unzip -q opencv_contrib.zip && \
     mkdir opencv-3.1.0/build && \
     cd opencv-3.1.0/build && \
