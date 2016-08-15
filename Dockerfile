@@ -8,9 +8,22 @@ RUN apt-get update && \
 	unzip \
 	cmake \
 	build-essential \
+	pkg-config \
 	clang \
+	libjpeg-dev \
 	libtiff5-dev \
-	python-dev \
+	libjasper-dev \
+	libpng12-dev \
+	libavcodec-dev \
+	libavformat-dev \
+	libeigen3-dev \
+	python2.7-dev \
+	libpython2.7-dev \
+	python-numpy \
+	libunicap2-dev \
+	libv4l-0 \
+	libv4l-dev \
+	v4l-utils \
 	&& \
   apt-get clean
 
@@ -28,6 +41,8 @@ RUN cd /tmp && \
     cmake \
         -D CMAKE_BUILD_TYPE=RELEASE \
 	-D BUILD_opencv_python2=YES \
+	-D BUILD_JPEG=YES \
+	-D WITH_WEBP=NO \
         -D WITH_OPENEXR=NO \ 
         -D BUILD_TESTS=NO \
 	-D BUILD_PERF_TESTS=NO \
